@@ -15,6 +15,7 @@ const btnAdd1 = document.getElementById("add__cart-1"),
   btnAdd5 = document.getElementById("add__cart-5"),
   btnAdd6 = document.getElementById("add__cart-6"),
   btnRemCart = document.getElementById("rem__cart"),
+  totalCart = document.getElementById("sum__cart"),
   countCart = document.getElementById("count__items");
 
 const carts = [];
@@ -55,16 +56,18 @@ function listCart() {
   }
 }
 
-function totalPrice(carts) {
-  let total;
-  if (carts.length > 1) {
-    for (let index = 0; index <= carts.length; index++) {
-      const element = parseFloat(carts[index].price);
-      total = element + element;
-    }
-    console.log(total);
+function totalCarts() {
+  let total = sumPrice();
+  totalCart.innerHTML = total;
+}
+
+function sumPrice() {
+  let sum = 0;
+  for (let i = 0; i < carts.length; i++) {
+    let element = carts[i].price;
+    sum += element;
   }
-  console.log(carts[0].price);
+  return sum;
 }
 
 // Eventos
@@ -76,6 +79,7 @@ btnAdd1.addEventListener("click", () => {
   aadCart(id, model, price);
   //console.log(carts.length);
   countItems();
+  totalCarts();
 });
 
 btnAdd2.addEventListener("click", () => {
@@ -85,6 +89,7 @@ btnAdd2.addEventListener("click", () => {
   aadCart(id, model, price);
   //console.log(carts.length);
   countItems();
+  totalCarts();
 });
 
 btnAdd3.addEventListener("click", () => {
@@ -94,6 +99,7 @@ btnAdd3.addEventListener("click", () => {
   aadCart(id, model, price);
   //console.log(carts.length);
   countItems();
+  totalCarts();
 });
 
 btnAdd4.addEventListener("click", () => {
@@ -103,6 +109,7 @@ btnAdd4.addEventListener("click", () => {
   aadCart(id, model, price);
   //console.log(carts.length);
   countItems();
+  totalCarts();
 });
 
 btnAdd5.addEventListener("click", () => {
@@ -112,6 +119,7 @@ btnAdd5.addEventListener("click", () => {
   aadCart(id, model, price);
   //console.log(carts.length);
   countItems();
+  totalCarts();
 });
 
 btnAdd6.addEventListener("click", () => {
@@ -121,9 +129,11 @@ btnAdd6.addEventListener("click", () => {
   aadCart(id, model, price);
   //console.log(carts.length);
   countItems();
+  totalCarts();
 });
 
 btnRemCart.addEventListener("click", () => {
   remCartItem();
   countItems();
+  totalCarts();
 });
