@@ -6,6 +6,15 @@
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 
+// NavBar Toggle.
+
+let menuToggle = document.querySelector(".menuToggle");
+let toggleMenu = document.querySelector(".toggleMenu");
+
+menuToggle.addEventListener("click", () => {
+  toggleMenu.classList.toggle("active");
+});
+
 // Alumno César L. Medina
 
 const btnAdd1 = document.getElementById("add__cart-1"),
@@ -16,6 +25,7 @@ const btnAdd1 = document.getElementById("add__cart-1"),
   btnAdd6 = document.getElementById("add__cart-6"),
   btnRemCart = document.getElementById("rem__cart"),
   totalCart = document.getElementById("sum__cart"),
+  list__cart = document.getElementById("list__cart"),
   countCart = document.getElementById("count__items");
 
 const carts = [];
@@ -25,8 +35,6 @@ function phones(id, model, price) {
   this.model = model;
   this.price = parseFloat(price);
 }
-
-let product = new phones();
 
 function aadCart(id, model, price) {
   carts.push(new phones(id, model, price));
@@ -51,8 +59,9 @@ function countItems() {
 function listCart() {
   for (let product of carts) {
     console.log("ID :", product.id);
-    console.log("Modelo :", product.model);
-    console.log("Precio :", product.price);
+    let itemMod = "Modelo: " + product.model + "</br>";
+    let itemPric = "Price: " + product.price;
+    list__cart.innerHTML = itemMod + itemPric;
   }
 }
 
@@ -80,6 +89,7 @@ btnAdd1.addEventListener("click", () => {
   //console.log(carts.length);
   countItems();
   totalCarts();
+  listCart();
 });
 
 btnAdd2.addEventListener("click", () => {
@@ -90,6 +100,7 @@ btnAdd2.addEventListener("click", () => {
   //console.log(carts.length);
   countItems();
   totalCarts();
+  listCart();
 });
 
 btnAdd3.addEventListener("click", () => {
@@ -100,6 +111,7 @@ btnAdd3.addEventListener("click", () => {
   //console.log(carts.length);
   countItems();
   totalCarts();
+  listCart();
 });
 
 btnAdd4.addEventListener("click", () => {
@@ -110,6 +122,7 @@ btnAdd4.addEventListener("click", () => {
   //console.log(carts.length);
   countItems();
   totalCarts();
+  listCart();
 });
 
 btnAdd5.addEventListener("click", () => {
@@ -120,6 +133,7 @@ btnAdd5.addEventListener("click", () => {
   //console.log(carts.length);
   countItems();
   totalCarts();
+  listCart();
 });
 
 btnAdd6.addEventListener("click", () => {
@@ -130,10 +144,12 @@ btnAdd6.addEventListener("click", () => {
   //console.log(carts.length);
   countItems();
   totalCarts();
+  listCart();
 });
 
 btnRemCart.addEventListener("click", () => {
   remCartItem();
   countItems();
   totalCarts();
+  list__cart.innerHTML = "";
 });
