@@ -37,7 +37,10 @@ function phones(id, model, price) {
 }
 
 function aadCart(id, model, price) {
-  carts.push(new phones(id, model, price));
+  if (carts.length < 3) {
+    carts.push(new phones(id, model, price));
+  } else
+  alert("you can only add up to three items")
 }
 
 function remCart(id) {
@@ -57,11 +60,17 @@ function countItems() {
 }
 
 function listCart() {
+  list__cart.innerHTML = "";
   for (let product of carts) {
-    console.log("ID :", product.id);
+    //console.log("ID :", product.id);
     let itemMod = "Modelo: " + product.model + "</br>";
     let itemPric = "Price: " + product.price;
-    list__cart.innerHTML = itemMod + itemPric;
+
+    const porductLst = document.createElement("p");
+    porductLst.innerHTML = itemMod + itemPric;
+
+    // Append to another element:
+    list__cart.appendChild(porductLst);
   }
 }
 
@@ -151,5 +160,5 @@ btnRemCart.addEventListener("click", () => {
   remCartItem();
   countItems();
   totalCarts();
-  list__cart.innerHTML = "";
+  listCart();
 });
