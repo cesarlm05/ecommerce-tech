@@ -36,7 +36,7 @@ function phones(id, model, price) {
   this.price = parseFloat(price);
 }
 
-function aadCart(id, model, price) {
+function addCart(id, model, price) {
   if (carts.length < 3) {
     carts.push(new phones(id, model, price));
   } else
@@ -64,7 +64,7 @@ function listCart() {
   for (let product of carts) {
     //console.log("ID :", product.id);
     let itemMod = "Modelo: " + product.model + "</br>";
-    let itemPric = "Price: " + product.price;
+    let itemPric = "Price: $" + product.price;
 
     const porductLst = document.createElement("p");
     porductLst.innerHTML = itemMod + itemPric;
@@ -94,7 +94,7 @@ btnAdd1.addEventListener("click", () => {
   let id = 1;
   let model = "Iphone s";
   let price = 80000;
-  aadCart(id, model, price);
+  addCart(id, model, price);
   //console.log(carts.length);
   countItems();
   totalCarts();
@@ -105,7 +105,7 @@ btnAdd2.addEventListener("click", () => {
   let id = 2;
   let model = "Iphone S 128gb";
   let price = 125000;
-  aadCart(id, model, price);
+  addCart(id, model, price);
   //console.log(carts.length);
   countItems();
   totalCarts();
@@ -116,7 +116,7 @@ btnAdd3.addEventListener("click", () => {
   let id = 3;
   let model = "Iphone S 265gb";
   let price = 240000;
-  aadCart(id, model, price);
+  addCart(id, model, price);
   //console.log(carts.length);
   countItems();
   totalCarts();
@@ -127,7 +127,7 @@ btnAdd4.addEventListener("click", () => {
   let id = 4;
   let model = "Motorola ONE";
   let price = 250000;
-  aadCart(id, model, price);
+  addCart(id, model, price);
   //console.log(carts.length);
   countItems();
   totalCarts();
@@ -138,7 +138,7 @@ btnAdd5.addEventListener("click", () => {
   let id = 5;
   let model = "Motorola Hyper fusion";
   let price = 280000;
-  aadCart(id, model, price);
+  addCart(id, model, price);
   //console.log(carts.length);
   countItems();
   totalCarts();
@@ -149,7 +149,7 @@ btnAdd6.addEventListener("click", () => {
   let id = 6;
   let model = "Samsung";
   let price = 270000;
-  aadCart(id, model, price);
+  addCart(id, model, price);
   //console.log(carts.length);
   countItems();
   totalCarts();
