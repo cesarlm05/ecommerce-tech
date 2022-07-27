@@ -1,0 +1,38 @@
+[
+    {
+      "precio": 80000,
+      "id": 1,
+      "title": "Iphones S",
+      "card-img-top": "https://i.postimg.cc/7P1B1rrq/iphone-s1.webp"
+    },
+    {
+      "precio": 125000,
+      "id": 2,
+      "title": "Iphone S 128gb",
+      "card-img-top": "https://i.postimg.cc/nrx380B8/iphone-s2.webp"
+    },
+    {
+      "precio": 155000,
+      "id": 3,
+      "title": "Iphone S 265gb",
+      "card-img-top": "https://i.postimg.cc/Jh9Tx1hz/iphone-s3.webp"
+    },
+    {
+      "precio": 165500,
+      "id": 4,
+      "title": "Motorola One Fusion",
+      "card-img-top": "https://i.postimg.cc/G3vfMsGw/phones-moto-5.webp"
+    },
+    {
+      "precio": 166100,
+      "id": 5,
+      "title": "Motorola Hyper fusion",
+      "card-img-top": "https://i.postimg.cc/mgmJYfMP/phones-moto-11.webp"
+    },
+    {
+      "precio": 186100,
+      "id": 6,
+      "title": "Motorola ONE",
+      "card-img-top": "https://i.postimg.cc/YCCyqnVM/phones-moto-2.webp"
+    }
+  ]
