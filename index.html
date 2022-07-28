@@ -41,24 +41,15 @@
                         Cart
                     </p>
                 </div>
+                <!-- Menu Toggle -->
                 <div class="menuToggle"></div>
                 <div class="cartItem">
                     <ul>
                         <li>
-                            <button class="btn btn-outline-dark" type="button" id="rem__cart">
-                                <i class="bi-cart-fill me-1"></i>
-                                Remove item cart
-                            </button>
-                        </li>
-                        <li>
-                            <button class="btn btn-outline-dark" type="button" id="btn__sum__cart">
-                                <i class="bi-cart-fill me-1"></i>
-                                Total
-                                <span class="badge bg-dark text-white ms-1 rounded-pill" id="sum__cart">0</span>
-                            </button>
-                        </li>
-                        <li>
                             <span id="list__cart"></span>
+                        </li>
+                        <li>
+                            <span id="footer__cart"></span>
                         </li>
                     </ul>
                 </div>
@@ -77,47 +68,75 @@
     <!-- Section-->
     <section class="py-5" id="section">
         <div class="container px-4 px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-
-                <template id="template-card">
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
-                                Sale
-                            </div>
-                            <!-- Product image-->
-                            <img class="card-img-top" src="" alt="phones" />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Title</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    <p>Precio</p>
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to
-                                        cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </template>
-
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="cards">
+                <!-- Products Cards -->
             </div>
         </div>
     </section>
+
+    <!-- Template Cart -->
+    <template id="template-cart">
+        <div class="col mb-5">
+            <tr>
+                <th scope="row">id</th>
+                <td>Phone</td>
+                <td>1</td>
+                <td>
+                    <button class="btn btn-info btn-sm">
+                        +
+                    </button>
+                    <button class="btn btn-danger btn-sm">
+                        -
+                    </button>
+                </td>
+                <td>$ <span>50000</span></td>
+            </tr>
+        </div>
+    </template>
+    <template id="template-footer-cart">
+        <th scope="row" colspan="2">Total</th>
+        <td>1</td>
+        <td>
+            <button class="btn btn-danger btn-sm" id="clear__cart">
+                Empy
+            </button>
+        </td>
+        <td class="font-weight-bold">$ <span>50000</span></td>
+    </template>
+
+    <!-- Template Cards -->
+    <template id="template-card">
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Sale badge-->
+                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                    Sale
+                </div>
+                <!-- Product image-->
+                <img class="card-img-top" src="" alt="phones" />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">Title</h5>
+                        <!-- Product reviews-->
+                        <div class="d-flex justify-content-center small text-warning mb-2">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                        </div>
+                        <!-- Product price-->
+                        <p>Precio</p>
+                        <!-- Product actions-->
+                        <a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
     <!-- Footer-->
     <footer class="py-5 bg-dark" id="about">
         <div class="container">
