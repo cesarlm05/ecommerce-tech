@@ -35,9 +35,7 @@ cards.addEventListener("click", (e) => {
   addCart(e);
 });
 
-itemsCart.addEventListener("click", (e) => {
-  btnAction(e);
-});
+
 
 const fetchData = async () => {
   try {
