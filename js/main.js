@@ -87,7 +87,7 @@ const printCarts = () => {
     console.log(carts);
     itemsCart.innerHTML = "";
     Object.values(carts).forEach((products) => {
-        templateCart.querySelector("th").textContent = products.id;
+        templateCart.querySelector("th").textContent = products.id;  // Uncaught TypeError: Cannot set properties of null (setting 'textContent')
         templateCart.querySelectorAll("td")[0].textContent = products.title;
         templateCart.querySelectorAll("td")[1].textContent = products.count;
         templateCart.querySelector(".btn-info").dataset.id = products.id;
