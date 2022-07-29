@@ -23,14 +23,15 @@ const cards = document.getElementById("cards"),
   templateCard = document.getElementById("template-card").content,
   templateFooter = document.getElementById("template-footer").content,
   templateCart = document.getElementById("template-cart").content,
+  countItems = document.getElementById("count__items"),
   fragment = document.createDocumentFragment();
 
 let Cart = {};
 
 document.addEventListener("DOMContentLoaded", () => {
   fetchData();
-  if (localStorage.getItem('Cart')) {
-    Cart = JSON.parse(localStorage.getItem('Cart'))
+  if (localStorage.getItem("Cart")) {
+    Cart = JSON.parse(localStorage.getItem("Cart"));
     printCart();
   }
 });
@@ -58,9 +59,7 @@ const printCards = (data) => {
   data.forEach((product) => {
     templateCard.querySelector("h5").textContent = product.title;
     templateCard.querySelector("p").textContent = product.price;
-    templateCard
-      .querySelector("img")
-      .setAttribute("src", product.thumbnailUrl);
+    templateCard.querySelector("img").setAttribute("src", product.thumbnailUrl);
     templateCard.querySelector(".btn-dark").dataset.id = product.id;
     const clone = templateCard.cloneNode(true);
     fragment.appendChild(clone);
@@ -95,7 +94,7 @@ const setCart = (objecto) => {
 };
 
 const printCart = () => {
-  console.log(Cart);
+  //console.log(Cart);
   items.innerHTML = "";
   Object.values(Cart).forEach((producto) => {
     templateCart.querySelector("th").textContent = producto.id;
@@ -111,7 +110,7 @@ const printCart = () => {
   });
   items.appendChild(fragment);
   printFooter();
-  localStorage.setItem("Cart", JSON.stringify(Cart)) // Almacena en el LocalStorage
+  localStorage.setItem("Cart", JSON.stringify(Cart)); // Almacena en el LocalStorage
 };
 
 const printFooter = () => {
@@ -122,10 +121,7 @@ const printFooter = () => {
     `;
     return;
   }
-  const nCount = Object.values(Cart).reduce(
-    (acc, { Count }) => acc + Count,
-    0
-  );
+  const nCount = Object.values(Cart).reduce((acc, { Count }) => acc + Count, 0);
   const nprice = Object.values(Cart).reduce(
     (acc, { Count, price }) => acc + Count * price,
     0
@@ -133,6 +129,7 @@ const printFooter = () => {
   //console.log(nCount);
   templateFooter.querySelectorAll("td")[0].textContent = nCount;
   templateFooter.querySelector("span").textContent = nprice;
+  countItems.innerHTML = nCount;
 
   const clone = templateFooter.cloneNode(true);
   fragment.appendChild(clone);
@@ -142,6 +139,7 @@ const printFooter = () => {
   btnClear.addEventListener("click", () => {
     Cart = {};
     printCart();
+    countItems.innerHTML = "0";
   });
 };
 
