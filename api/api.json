@@ -3,36 +3,36 @@
       "price": 80000,
       "id": 1,
       "title": "Iphones S",
-      "card__img": "https://i.postimg.cc/7P1B1rrq/iphone-s1.webp"
+      "thumbnailUrl": "https://i.postimg.cc/7P1B1rrq/iphone-s1.webp"
     },
     {
       "price": 125000,
       "id": 2,
       "title": "Iphone S 128gb",
-      "card__img": "https://i.postimg.cc/nrx380B8/iphone-s2.webp"
+      "thumbnailUrl": "https://i.postimg.cc/nrx380B8/iphone-s2.webp"
     },
     {
       "price": 155000,
       "id": 3,
       "title": "Iphone S 265gb",
-      "card__img": "https://i.postimg.cc/Jh9Tx1hz/iphone-s3.webp"
+      "thumbnailUrl": "https://i.postimg.cc/Jh9Tx1hz/iphone-s3.webp"
     },
     {
       "price": 165500,
       "id": 4,
       "title": "Motorola One Fusion",
-      "card__img": "https://i.postimg.cc/G3vfMsGw/phones-moto-5.webp"
+      "thumbnailUrl": "https://i.postimg.cc/G3vfMsGw/phones-moto-5.webp"
     },
     {
       "price": 166100,
       "id": 5,
       "title": "Motorola Hyper fusion",
-      "card__img": "https://i.postimg.cc/mgmJYfMP/phones-moto-11.webp"
+      "thumbnailUrl": "https://i.postimg.cc/mgmJYfMP/phones-moto-11.webp"
     },
     {
       "price": 186100,
       "id": 6,
       "title": "Motorola ONE",
-      "card__img": "https://i.postimg.cc/YCCyqnVM/phones-moto-2.webp"
+      "thumbnailUrl": "https://i.postimg.cc/YCCyqnVM/phones-moto-2.webp"
     }
   ]

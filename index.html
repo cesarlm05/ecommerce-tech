@@ -66,47 +66,32 @@
         </div>
     </header>
     <!-- Section-->
-    <section class="py-5" id="section">
-        <div class="container px-4 px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="cards">
-                <!-- Products Cards -->
-            </div>
-        </div>
-    </section>
+    <div class="container">
+        <div class="row" id="cards"></div>
+        <hr>
 
-    <!-- Template Cart -->
-    <template id="template-cart">
-        <div class="col mb-5">
-            <tr>
-                <th scope="row">id</th>
-                <td>Phone</td>
-                <td>1</td>
-                <td>
-                    <button class="btn btn-info btn-sm">
-                        +
-                    </button>
-                    <button class="btn btn-danger btn-sm">
-                        -
-                    </button>
-                </td>
-                <td>$ <span>50000</span></td>
-            </tr>
-        </div>
-    </template>
-    <template id="template-footer-cart">
-        <th scope="row" colspan="2">Total</th>
-        <td>1</td>
-        <td>
-            <button class="btn btn-danger btn-sm" id="clear__cart">
-                Empy
-            </button>
-        </td>
-        <td class="font-weight-bold">$ <span>50000</span></td>
-    </template>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Count</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody id="items"></tbody>
+            <tfoot>
+                <tr id="footer">
+                    <th scope="row" colspan="5">Cart empy</th>
+                </tr>
+            </tfoot>
+        </table>
 
+    </div>
     <!-- Template Cards -->
     <template id="template-card">
-        <div class="col mb-5">
+        <div class="col-12 mb-2 col-md-4">
             <div class="card h-100">
                 <!-- Sale badge-->
                 <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
@@ -130,12 +115,42 @@
                         <!-- Product price-->
                         <p>Precio</p>
                         <!-- Product actions-->
-                        <a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+                        <a class="btn btn-dark mt-auto" href="#">Add to cart</a>
                     </div>
                 </div>
             </div>
         </div>
     </template>
+
+    <template id="template-cart">
+        <tr>
+            <th scope="row">id</th>
+            <td>Phone</td>
+            <td>1</td>
+            <td>
+                <button class="btn btn-info btn-sm">
+                    +
+                </button>
+                <button class="btn btn-danger btn-sm">
+                    -
+                </button>
+            </td>
+            <td>$ <span>50000</span></td>
+        </tr>
+    </template>
+
+    <template id="template-footer">
+        <th scope="row" colspan="2">Total products</th>
+        <td>10</td>
+        <td>
+            <button class="btn btn-danger btn-sm" id="clear__cart">
+                Clean all
+            </button>
+        </td>
+        <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
+
+
 
     <!-- Footer-->
     <footer class="py-5 bg-dark" id="about">
@@ -146,7 +161,7 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script src="js/main.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
