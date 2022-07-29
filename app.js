@@ -24,6 +24,7 @@ const cards = document.getElementById("cards"),
   templateFooter = document.getElementById("template-footer").content,
   templateCart = document.getElementById("template-cart").content,
   countItems = document.getElementById("count__items"),
+  totalCart = document.getElementById("total__cart"),
   fragment = document.createDocumentFragment();
 
 let Cart = {};
@@ -130,6 +131,7 @@ const printFooter = () => {
   templateFooter.querySelectorAll("td")[0].textContent = nCount;
   templateFooter.querySelector("span").textContent = nprice;
   countItems.innerHTML = nCount;
+  totalCart.innerHTML = "$" + nprice;
 
   const clone = templateFooter.cloneNode(true);
   fragment.appendChild(clone);
@@ -140,6 +142,7 @@ const printFooter = () => {
     Cart = {};
     printCart();
     countItems.innerHTML = "0";
+    totalCart.innerHTML = "";
   });
 };
 

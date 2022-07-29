@@ -120,7 +120,7 @@ body {
 }
 .toggleMenu.active {
   width: 300px;
-  height: 200px;
+  height: 290px;
   transition: width 0.5s, heigth 0.5s;
   transition-delay: 0s, 0.75s;
 }
@@ -212,16 +212,16 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.cartItem ul a {
+.cartItem ul span {
   display: flex;
   gap: 10px;
   text-decoration: none;
   margin: 20px 0;
   padding: 10px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  color: #333;
+  color: rgb(120, 120, 120);
 }
 .cartItem ul a i {
   margin-right: 10px;
