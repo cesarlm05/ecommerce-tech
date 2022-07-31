@@ -1,0 +1,50 @@
+[
+  {
+    "price": 80000,
+    "id": 1,
+    "title": "Iphones S",
+    "thumbnailUrl": "https://i.postimg.cc/7P1B1rrq/iphone-s1.webp"
+  },
+  {
+    "price": 125000,
+    "id": 2,
+    "title": "Iphone S 128gb",
+    "thumbnailUrl": "https://i.postimg.cc/nrx380B8/iphone-s2.webp"
+  },
+  {
+    "price": 155000,
+    "id": 3,
+    "title": "Iphone S 265gb",
+    "thumbnailUrl": "https://i.postimg.cc/Jh9Tx1hz/iphone-s3.webp"
+  },
+  {
+    "price": 165500,
+    "id": 4,
+    "title": "Motorola One Fusion",
+    "thumbnailUrl": "https://i.postimg.cc/G3vfMsGw/phones-moto-5.webp"
+  },
+  {
+    "price": 166100,
+    "id": 5,
+    "title": "Motorola Hyper Fusion",
+    "thumbnailUrl": "https://i.postimg.cc/mgmJYfMP/phones-moto-11.webp"
+  },
+  {
+    "price": 186100,
+    "id": 6,
+    "title": "Motorola ONE",
+    "thumbnailUrl": "https://i.postimg.cc/YCCyqnVM/phones-moto-2.webp"
+  },
+  {
+    "price": 136100,
+    "id": 7,
+    "title": "Samsung A70",
+    "thumbnailUrl": "https://i.postimg.cc/V6x3Jqt4/phones-smg-2.webp"
+  },
+  {
+    "price": 151100,
+    "id": 8,
+    "title": "Samsung A30",
+    "thumbnailUrl": "https://i.postimg.cc/SNpBqGkx/phones-smg.webp"
+  }
+]
