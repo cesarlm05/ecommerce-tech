@@ -34,5 +34,17 @@
       "id": 6,
       "title": "Motorola ONE",
       "thumbnailUrl": "https://i.postimg.cc/YCCyqnVM/phones-moto-2.webp"
+    },
+    {
+      "price": 136100,
+      "id": 7,
+      "title": "Samsung A70",
+      "thumbnailUrl": "https://i.postimg.cc/V6x3Jqt4/phones-smg-2.webp"
+    },
+    {
+      "price": 151100,
+      "id": 8,
+      "title": "Samsung A30",
+      "thumbnailUrl": "https://i.postimg.cc/SNpBqGkx/phones-smg.webp"
     }
   ]
