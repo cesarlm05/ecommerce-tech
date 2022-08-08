@@ -17,10 +17,11 @@ menuToggle.addEventListener("click", () => {
 
 // Alumno César L. Medina
 
+// Checkout
+
 const cards = document.getElementById("cards"),
   items = document.getElementById("items"),
   footer = document.getElementById("footer"),
-  templateCard = document.getElementById("template-card").content,
   templateFooter = document.getElementById("template-footer").content,
   templateCart = document.getElementById("template-cart").content,
   countItems = document.getElementById("count__items"),
@@ -37,10 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-cards.addEventListener("click", (e) => {
-  addCart(e);
-});
-
 items.addEventListener("click", (e) => {
   btnAction(e);
 });
@@ -55,22 +52,7 @@ const fetchData = async () => {
   }
 };
 
-const printCards = (data) => {
-  //console.log(data);
-  data.forEach((product) => {
-    templateCard.querySelector("h5").textContent = product.title;
-    templateCard.querySelector("p").textContent = product.price;
-    templateCard.querySelector("img").setAttribute("src", product.thumbnailUrl);
-    templateCard.querySelector(".btn-dark").dataset.id = product.id;
-    const clone = templateCard.cloneNode(true);
-    fragment.appendChild(clone);
-  });
-  cards.appendChild(fragment);
-};
-
 const addCart = (e) => {
-  //console.log(e.target);
-  //console.log(e.target.classList.contains("btn-dark"));
   if (e.target.classList.contains("btn-dark")) {
     setCart(e.target.parentElement);
   }
@@ -78,7 +60,6 @@ const addCart = (e) => {
 };
 
 const setCart = (objecto) => {
-  //console.log(objecto);
   const producto = {
     id: objecto.querySelector(".btn-dark").dataset.id,
     title: objecto.querySelector("h5").textContent,
@@ -95,7 +76,6 @@ const setCart = (objecto) => {
 };
 
 const printCart = () => {
-  //console.log(Cart);
   items.innerHTML = "";
   Object.values(cart).forEach((producto) => {
     templateCart.querySelector("th").textContent = producto.id;
@@ -127,7 +107,6 @@ const printFooter = () => {
     (acc, { Count, price }) => acc + Count * price,
     0
   );
-  //console.log(nCount);
   templateFooter.querySelectorAll("td")[0].textContent = nCount;
   templateFooter.querySelector("span").textContent = nprice;
   countItems.innerHTML = nCount;
@@ -149,7 +128,7 @@ const printFooter = () => {
 const btnAction = (e) => {
   // acción de aumentar
   if (e.target.classList.contains("btn-info")) {
-    // Cart[e.target.dataset.id]
+    // cart[e.target.dataset.id]
     const producto = cart[e.target.dataset.id];
     producto.Count = cart[e.target.dataset.id].Count + 1;
     cart[e.target.dataset.id] = { ...producto };
