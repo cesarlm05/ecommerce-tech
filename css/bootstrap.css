@@ -130,8 +130,8 @@ body {
   overflow: hidden;
 }
 .toggleMenu.active {
-  width: 95%;
-  height: 90%;
+  width: 30%;
+  height: 50%;
   transition: width 0.5s, heigth 0.5s;
   transition-delay: 0s, 0.75s;
 }
