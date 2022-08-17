@@ -46,11 +46,34 @@
                 <div class="menuToggle"></div>
                 <div class="cartItem">
                     <ul>
+                        <!-- <li>
+                            <span id="list__cart"> <button class="btn btn-dark mt-auto">Checkout</button></span>
+                        </li> -->
                         <li>
-                            <span id="list__cart"> <a class="btn btn-dark mt-auto" href="./pages/checkout.html">Checkout</a></span>
+                            <div class="container px-4 px-lg-5 my-5">
+                                <div class="row"></div>
+                                <table id="checkout" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Item</th>
+                                            <th scope="col">Count</th>
+                                            <th scope="col">Action</th>
+                                            <th scope="col">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="items"></tbody>
+                                    <tfoot>
+                                        <tr id="footer">
+                                            <th scope="row" colspan="5">Cart empy</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <div class="loader"></div>
+                            </div>
                         </li>
                         <li>
-                            <span id="total__cart"></span>
+                            <!-- <span id="total__cart"></span> -->
                         </li>
                     </ul>
                 </div>
@@ -69,8 +92,7 @@
     <!-- Section-->
     <div class="container">
         <div class="row" id="cards"></div>
-
-        <table id="checkout" class="table">
+    <!--<table id="checkout" class="table">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -86,9 +108,8 @@
                     <th scope="row" colspan="5">Cart empy</th>
                 </tr>
             </tfoot>
-        </table>
-        <div class="loader"></div>
-
+        </table> -->
+        <!-- <div class="loader"></div> -->
     </div>
     <!-- Template Cards -->
     <template id="template-card">
