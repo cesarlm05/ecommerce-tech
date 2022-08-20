@@ -4,11 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Nos enfocamos en elegir cuidadosamente nuestro catalogo de productos para traerte lo
-    merjor, siempre pensando en tener los precios mas competitivos del mercado, y con la mas alta
-    calidad que buscás" />
+    <meta name="description" content="Nos enfocamos fuertemente en el rubro de tecnología, con productos que abarcan
+    televisores, celulares, tabletas, notebooks, cámaras digitales y pequeños electrodomésticos
+    como batidoras, afeitadoras, planchas de pelo. Ofrecemos a nuestros clientes la posibilidad
+    de pagar sus compras con variedad de medios de pago." />
     <meta name="author" content="VERSATILE Website 2022 - Cesar Medina" />
-    <title>VERSATILE</title>
+    <title>Productos - VERSATILE</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -20,7 +21,6 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../css/styles.css" rel="stylesheet" />
 </head>
-
 <body>
     <header>
         <h1 class="site-heading text-center text-faded d-none d-lg-block">
@@ -38,159 +38,110 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="../index.html">Inicio</a></li>
-                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">Nosotros</a></li>
-                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">Productos</a>
-                    </li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="./about.html">Nosotros</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="./products.html">Productos</a></li>
                     <!-- <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">Store</a></li> -->
                 </ul>
             </div>
         </div>
     </nav>
-    <section class="page-section clearfix">
-        <div class="container">
-            <div class="intro">
-                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="../assets/img/intro.jpg" alt="..." />
-                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                    <h2 class="section-heading mb-4">
-                        <span class="section-heading-upper">VERSATILE</span>
-                        <span class="section-heading-lower">Polirubro</span>
-                    </h2>
-                    <p class="mb-3">Nos enfocamos en elegir cuidadosamente nuestro catalogo de productos para traerte lo
-                        merjor, siempre pensando en tener los precios mas competitivos del mercado, y con la mas alta
-                        calidad que buscás!</p>
-                    <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="./products.html">Nuestro
-                            Catálogo</a></div>
+    <!-- CartBox -->
+    <div class="container-fluid">
+        <section class="toggleMenu">
+            <div class="cartBox">
+                <div class="imgBox">
+                    <span class="badge bg-dark text-white ms-1 rounded-pill" id="count__items">0</span>
                 </div>
+                <p class="cartName">
+                    <img src="../assets/box.svg" alt="cart">
+                    Cart
+                </p>
             </div>
-        </div>
-    </section>
-
-    <section class="page-section">
-        <div class="container">
-            <div class="product-item">
-                <div class="product-item-title d-flex">
-                    <div class="bg-faded p-5 d-flex ms-auto rounded">
-                        <h2 class="section-heading mb-0">
-                            <span class="section-heading-upper">Linea blanca</span>
-                            <span class="section-heading-lower">Electrodomésticos</span>
-                        </h2>
-                    </div>
-                </div>
-                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                    src="../assets/img/products-01.jpg" alt="Electrodomésticos" />
-                <div class="product-item-description d-flex me-auto">
-                    <div class="bg-faded p-5 rounded">
-                        <p class="mb-0">Nos enfocamos fuertemente en el rubro de tecnología, con productos que abarcan
-                            televisores, celulares, tabletas, notebooks, cámaras digitales y pequeños electrodomésticos
-                            como batidoras, afeitadoras, planchas de pelo. Ofrecemos a nuestros clientes la posibilidad
-                            de pagar sus compras con variedad de medios de pago.</p>
-                    </div>
-                </div>
+            <!-- Menu Toggle -->
+            <div class="menuToggle"></div>
+            <div class="cartItem">
+                <ul>
+                    <li>
+                        <span id="list__cart"> <a class="btn btn-dark mt-auto" href="#checkout">Checkout</a></span>
+                    </li>
+                    <li>
+                        <span id="total__cart"></span>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </section>
-    <section class="page-section">
-        <div class="container">
-            <div class="product-item">
-                <div class="product-item-title d-flex">
-                    <div class="bg-faded p-5 d-flex me-auto rounded">
-                        <h2 class="section-heading mb-0">
-                            <span class="section-heading-upper">Lavarropas al mejor precio</span>
-                            <span class="section-heading-lower">automáticos & semiautomáticos</span>
-                        </h2>
-                    </div>
-                </div>
-                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                    src="../assets/img/products-02.jpg" alt="Lavarropas" />
-                <div class="product-item-description d-flex ms-auto">
-                    <div class="bg-faded p-5 rounded">
-                        <p class="mb-0">Ofertas en lavarropas automáticos, semiautomáticos, de carga frontal o carga
-                            superior.
-                            Lavarropas con eficiencia en el cuidado de la ropa y del medio ambiente
-
-                            Nuestros lavarropas están hechos para vos que buscás un electrodoméstico que se ajuste a tu
-                            vida en todo los sentidos. Con programas de lavado eficientes para cuidar mejor tus prendas,
-                            tecnología de punta y materiales más resistentes.
-
-                            ¡Lo mejor! Tenemos una amplia variedad de modelos entre los cuales podes elegir un
-                            lavarropas con carga superior o frontal, diferentes medidas, capacidades y colores para que
-                            personalices mucho más tus espacios.
-
-                            Desde la primera lavada, notarás la eficiencia que los caracteriza.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="page-section">
-        <div class="container">
-            <div class="product-item">
-                <div class="product-item-title d-flex">
-                    <div class="bg-faded p-5 d-flex ms-auto rounded">
-                        <h2 class="section-heading mb-0">
-                            <span class="section-heading-upper">Rodados</span>
-                            <span class="section-heading-lower">Las mejores bicis las encontrarás aquí!</span>
-                        </h2>
-                    </div>
-                </div>
-                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                    src="../assets/img/products-03.jpg" alt="..." />
-                <div class="product-item-description d-flex me-auto">
-                    <div class="bg-faded p-5 rounded">
-                        <p class="mb-0">La bicicleta ya tiene más de un siglo y medio de historia y nunca ha sido tan
-                            actual.
-
-                            Se trata del medio de transporte más democrático y sano que existe, porque mantiene la salud
-                            de su cuerpo, del planeta y de su bolsillo, ya que es barato, no contaminante y una
-                            actividad física supercompleta!
-
-                            Sea como medio de transporte, sea como forma de practicar ejercicios, o aún como el regalo
-                            de los sueños de los niños, la bicicleta juega un papel importante en nuestro día a día.
-                            Entonces, decidimos traerte el mercado las mejores bicicletas teniendo en cuenta un
-                            equilibrio
-                            etico entre calidad y precio.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="page-section cta">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-9 mx-auto">
-                    <div class="cta-inner bg-faded text-center rounded">
-                        <h2 class="section-heading mb-4">
-                            <span class="section-heading-upper">Nuestra atención</span>
-                            <span class="section-heading-lower">Cuando entras a nuestra tienda virtual</span>
-                        </h2>
-                        <p class="mb-0">
-                            Nos dedicamos a brindarle un servicio amable, un ambiente seguro para tus compras online y,
-                            sobre todo, excelentes productos de la más alta calidad.
-                            Si no está satisfecho, háganoslo saber y haremos todo lo posible
-                            para hacer las cosas mejor.!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--WhatsApp Start -->
-    <div>
-        <!-- Los estilos para el Widget de WhatsApp esten en "_components.scss"-->
-        <div id="whatsAppWidget">
-            <a href="https://walink.co/134dc6" target="_blank">
-                <div class="whatsapp-widget">
-                    <svg viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <path
-                            d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"
-                            fill-rule="evenodd"></path>
-                    </svg>
-                </div>
-            </a>
-        </div>
+        </section>
     </div>
-    <!--WhatsApp End -->
+
+    <div class="container">
+        <div class="row" id="cards"></div>
+        <table id="checkout" class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Count</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody id="items"></tbody>
+            <tfoot>
+                <tr id="footer">
+                    <th scope="row" colspan="5">Cart empy</th>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="loader"></div>
+    </div>
+    <!-- Template Cards -->
+    <template id="template-card">
+        <div class="col-12 mb-2 col-md-4">
+            <div class="card h-100">
+                <!-- Product image-->
+                <img class="card-img-top" src="" alt="phones" />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">Title</h5>
+                        <!-- Product price-->
+                        <p>Precio</p>
+                        <!-- Product actions-->
+                        <button class="btn btn-dark mt-auto">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="template-cart">
+        <tr>
+            <th scope="row">id</th>
+            <td>Phone</td>
+            <td>1</td>
+            <td>
+                <button class="btn btn-info btn-sm">
+                    +
+                </button>
+                <button class="btn btn-danger btn-sm">
+                    -
+                </button>
+            </td>
+            <td>$ <span>50000</span></td>
+        </tr>
+    </template>
+
+    <template id="template-footer">
+        <th scope="row" colspan="2">Total products</th>
+        <td>10</td>
+        <td>
+            <button class="btn btn-danger btn-sm" id="clear__cart">
+                Clean all
+            </button>
+        </td>
+        <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
+
     <footer class="footer text-faded text-center py-5">
         <div class="container">
             <p class="m-0 small">Copyright &copy; VERSATILE Website 2022</p>

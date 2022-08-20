@@ -1,10 +1,13 @@
 /*!
- * Start Bootstrap - Shop Homepage v5.0.5 (https://startbootstrap.com/template/shop-homepage)
- * Copyright 2013-2022 Start Bootstrap
- * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-homepage/blob/master/LICENSE)
- */
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+* Start Bootstrap - Business Casual v7.0.8 (https://startbootstrap.com/theme/business-casual)
+* Copyright 2013-2022 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-casual/blob/master/LICENSE)
+*/
+// Highlights current date on contact page
+window.addEventListener('DOMContentLoaded', event => {
+    const listHoursArray = document.body.querySelectorAll('.list-hours li');
+    listHoursArray[new Date().getDay()].classList.add(('today'));
+})
 
 // NavBar Toggle.
 
@@ -17,11 +20,10 @@ menuToggle.addEventListener("click", () => {
 
 // Alumno César L. Medina
 
-// Checkout
-
 const cards = document.getElementById("cards"),
   items = document.getElementById("items"),
   footer = document.getElementById("footer"),
+  templateCard = document.getElementById("template-card").content,
   templateFooter = document.getElementById("template-footer").content,
   templateCart = document.getElementById("template-cart").content,
   countItems = document.getElementById("count__items"),
@@ -38,6 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+cards.addEventListener("click", (e) => {
+  addCart(e);
+});
+
 items.addEventListener("click", (e) => {
   btnAction(e);
 });
@@ -52,7 +58,22 @@ const fetchData = async () => {
   }
 };
 
+const printCards = (data) => {
+  //console.log(data);
+  data.forEach((product) => {
+    templateCard.querySelector("h5").textContent = product.title;
+    templateCard.querySelector("p").textContent = product.price;
+    templateCard.querySelector("img").setAttribute("src", product.thumbnailUrl);
+    templateCard.querySelector(".btn-dark").dataset.id = product.id;
+    const clone = templateCard.cloneNode(true);
+    fragment.appendChild(clone);
+  });
+  cards.appendChild(fragment);
+};
+
 const addCart = (e) => {
+  //console.log(e.target);
+  //console.log(e.target.classList.contains("btn-dark"));
   if (e.target.classList.contains("btn-dark")) {
     setCart(e.target.parentElement);
   }
@@ -60,6 +81,7 @@ const addCart = (e) => {
 };
 
 const setCart = (objecto) => {
+  //console.log(objecto);
   const producto = {
     id: objecto.querySelector(".btn-dark").dataset.id,
     title: objecto.querySelector("h5").textContent,
@@ -76,6 +98,7 @@ const setCart = (objecto) => {
 };
 
 const printCart = () => {
+  //console.log(Cart);
   items.innerHTML = "";
   Object.values(cart).forEach((producto) => {
     templateCart.querySelector("th").textContent = producto.id;
@@ -107,6 +130,7 @@ const printFooter = () => {
     (acc, { Count, price }) => acc + Count * price,
     0
   );
+  //console.log(nCount);
   templateFooter.querySelectorAll("td")[0].textContent = nCount;
   templateFooter.querySelector("span").textContent = nprice;
   countItems.innerHTML = nCount;
@@ -128,7 +152,7 @@ const printFooter = () => {
 const btnAction = (e) => {
   // acción de aumentar
   if (e.target.classList.contains("btn-info")) {
-    // cart[e.target.dataset.id]
+    // Cart[e.target.dataset.id]
     const producto = cart[e.target.dataset.id];
     producto.Count = cart[e.target.dataset.id].Count + 1;
     cart[e.target.dataset.id] = { ...producto };
@@ -140,6 +164,8 @@ const btnAction = (e) => {
     producto.Count = cart[e.target.dataset.id].Count - 1;
     if (producto.Count === 0) {
       delete cart[e.target.dataset.id];
+      countItems.innerHTML = "0";
+      totalCart.innerHTML = "";
       // El operador delete de JavaScript remueve una propiedad de un objeto; si no se mantienen más referencias a la misma propiedad, eventualmente se libera automáticamente.
     }
     printCart();
