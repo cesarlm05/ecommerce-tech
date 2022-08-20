@@ -76,7 +76,7 @@ const addCart = (e) => {
   //console.log(e.target.classList.contains("btn-dark"));
   if (e.target.classList.contains("btn-dark")) {
     setCart(e.target.parentElement);
-    alert();
+    addAlert();
   }
   e.stopPropagation();
 };
@@ -145,6 +145,7 @@ const printFooter = () => {
   btnClear.addEventListener("click", () => {
     cart = {};
     printCart();
+    remAlert();
     countItems.innerHTML = "0";
     totalCart.innerHTML = "";
   });
@@ -175,13 +176,27 @@ const btnAction = (e) => {
   // El método stopPropagation() de la interfaz Event evita la propagación adicional del evento actual en las fases de captura y bubbling.
 };
 
-function alert(){
+function addAlert(){
   Swal.fire({
     title: `Copado!`,
       html: `<p>Agregaste al carrito un Item</p>`,
       icon: `success`,
       background: `#000`,
-      timer: `3000`,
+      timer: `2500`,
+      allowOutsideClick: false,
+    allowEscapeKey: false,
+    allowEnterKey: false,
+    stopKeydownPropagation: false
+  });
+}
+
+function remAlert(){
+  Swal.fire({
+    title: `Lástima!`,
+      html: `<p>Borraste el carrito =(</p>`,
+      icon: `info`,
+      background: `#000`,
+      timer: `2500`,
       allowOutsideClick: false,
     allowEscapeKey: false,
     allowEnterKey: false,
