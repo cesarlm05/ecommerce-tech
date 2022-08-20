@@ -76,6 +76,7 @@ const addCart = (e) => {
   //console.log(e.target.classList.contains("btn-dark"));
   if (e.target.classList.contains("btn-dark")) {
     setCart(e.target.parentElement);
+    alert();
   }
   e.stopPropagation();
 };
@@ -173,3 +174,17 @@ const btnAction = (e) => {
   e.stopPropagation();
   // El método stopPropagation() de la interfaz Event evita la propagación adicional del evento actual en las fases de captura y bubbling.
 };
+
+function alert(){
+  Swal.fire({
+    title: `Copado!`,
+      html: `<p>Agregaste al carrito un Item</p>`,
+      icon: `success`,
+      background: `#000`,
+      timer: `3000`,
+      allowOutsideClick: false,
+    allowEscapeKey: false,
+    allowEnterKey: false,
+    stopKeydownPropagation: false
+  });
+}
