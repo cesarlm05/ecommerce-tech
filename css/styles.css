@@ -121,7 +121,7 @@ body {
   overflow: hidden;
 }
 .toggleMenu.active {
-  width: 220px;
+  width: 260px;
   height: 220px;
   transition: width 0.5s, heigth 0.5s;
   transition-delay: 0s, 0.75s;
@@ -237,6 +237,7 @@ body {
 }
 #checkout {
   margin: 45px 0 25px 0;
+  color: #fff;
 }
 
 .loader {
