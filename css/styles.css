@@ -5043,7 +5043,7 @@ fieldset:disabled .btn {
 }
 
 .card {
-  position: relative;
+  *position: relative;
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -5051,8 +5051,11 @@ fieldset:disabled .btn {
   background-color: #ffffff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border-radius: 0.55rem;
+  margin-top: 5px;
+  padding: 3px;
 }
+
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -5147,14 +5150,14 @@ fieldset:disabled .btn {
 
 .card-img,
 .card-img-top {
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
+  border-top-left-radius: calc(0.55rem - 1px);
+  border-top-right-radius: calc(0.55rem - 1px);
 }
 
 .card-img,
 .card-img-bottom {
-  border-bottom-right-radius: calc(0.25rem - 1px);
-  border-bottom-left-radius: calc(0.25rem - 1px);
+  border-bottom-right-radius: calc(0.55rem - 1px);
+  border-bottom-left-radius: calc(0.55rem - 1px);
 }
 
 .card-group > .card {
@@ -12032,7 +12035,7 @@ p {
   background-color: rgb(86 170 230 / 90%);
 }
 .cta .cta-inner {
-  position: relative;
+  *position: relative;
   padding: 3rem;
   margin: 0.5rem;
 }
