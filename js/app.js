@@ -174,10 +174,10 @@ const btnAction = (e) => {
 function addAlert(){
   Swal.fire({
     title: `Copado!`,
-      html: `<p>Agregaste al carrito un Item</p>`,
+      html: `<p>Agregaste al carrito un Artículo</p>`,
       icon: `success`,
       background: `#000`,
-      timer: `2500`,
+      timer: `2000`,
       allowOutsideClick: false,
     allowEscapeKey: false,
     allowEnterKey: false,
@@ -191,7 +191,7 @@ function remAlert(){
       html: `<p>Borraste el carrito =(</p>`,
       icon: `info`,
       background: `#000`,
-      timer: `2500`,
+      timer: `2000`,
       allowOutsideClick: false,
     allowEscapeKey: false,
     allowEnterKey: false,
