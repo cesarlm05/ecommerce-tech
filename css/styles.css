@@ -5050,6 +5050,7 @@ fieldset:disabled .btn {
   min-width: 0;
   word-wrap: break-word;
   background-color: #ffffff;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.85);
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.55rem;
@@ -5083,6 +5084,12 @@ fieldset:disabled .btn {
 .card-body {
   flex: 1 1 auto;
   padding: 1rem 1rem;
+}
+
+.card-body p {
+  color: #5271ff;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .card-title {
