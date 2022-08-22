@@ -120,6 +120,7 @@ body {
   height: 60px;
   background: #ffffff;
   box-shadow: 0 25px 35px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem !important;
   display: flex;
   justify-content: space-between;
   transition: heigth 0.5s, width 0.5s;
